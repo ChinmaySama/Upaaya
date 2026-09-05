@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #ffffff;
+  --text-main: #111111;
+  --text-highlight: #e5a910;
+  --accent-button: #ffd100;
+  --ui-muted: #e2e2e2;
+
+  --font-heading: var(--font-sans), system-ui, -apple-system, sans-serif;
+  --font-sans: var(--font-sans), system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+}
+
+.font-heading,
+.font-display {
+  font-family: var(--font-sans);
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+.font-sans,
+.font-mono,
+.font-serif {
+  font-family: var(--font-sans);
+}
+
+/* Custom crisp scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f4f4f4;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--ui-muted);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-highlight);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
